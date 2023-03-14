@@ -1,54 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./main.scss">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400&family=Rubik&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./main.scss">
+  <title>S2. Bootstrap y SASS</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a href="index.html"></a>
-          <a class="navbar-brand" href="#"><img src="./Imagenes/logo-bookmark.svg" class="img-fluid" alt="./imagenes/logo-bookmark.svg"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current href="#">
-                    <p class="#feactures" class="nav-link">FEACTURES</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current href="#">
-                <a class="#pricing" class="nav-link">PRICING</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current href="#">
-                <a class="#contact" class="nav-link">CONTACT</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <button class= "btn btn-outline-danger"  type="submit">LOGIN</button>
-            </form>
-          </div>
+
+  <!--NAVBAR /barra de navegación -->
+  <div class="container-fluid">
+    <nav id="navbar" class="navbar navbar-expand-md navbar-light">
+      <div class="container-xxl">
+        <a href="#" class="navbar-brand">
+          <img src="/Imagenes/logo-bookmark.svg" alt="" class="logo-bookmark d-inline-block align-text-top">
+        </a>
+
+
+        <!-- TOGGLE /Para movil-->
+        <button id="toggler-nav" class="navbar-toggler d-flex d-md-none flex-column justify-content-around collapsed"
+          type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="toggler-icon top-bar"></span>
+          <span class="toggler-icon middle-bar"></span>
+          <span class="toggler-icon bottom-bar"></span>
+        </button>
+
+        <div id="main-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item mx-3">
+              <a id="features-nav" href="#features" class="nav-link">FEATURES</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a href="#pricing" class="nav-link">PRICING</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a href="#contact" class="nav-link">CONTACT</a>
+            </li>
+            <li class="nav-item mx-3 d-md-inline">
+              <a href="#login" class="btn btn-secondary btn-intro shadow-sm">LOGIN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- MAIN CONTENT /contenido principal-->
+
+  <section id="intro" class="container-fluid overflow-hidden pt-md-2 pt-sm-2 pb-sm-0 pb-5">
+    <div class="row justify-content-between align-items-center">
+      <div class="intro-img col-12 col-md-5 order-md-2  gx-5 ms-md-5 mb-sm-5">
+        <img class="intro-img-tab img-fluid" src="/Imagenes/illustration-hero.svg" alt="tab1">
+        <img id="imagen" src="/Imagenes/imagen.svg" alt="imagen" class="img-fluid">
+      </div>
+
+      <div
+        class="col-md-5 col-12 order-md-1 gy-5 ms-lg-5 ms-md-5 p-lg-4 p-md-0 p-sm-5  text-center text-md-start text-lg-start text-xl-start">
+        <h1>
+          <div class="display-4 fw-bold">A Simple Bookmark Manager</div>
+        </h1>
+        <p class="subtext-intro lead my-4 text-muted text-wrap">A clean and simple interface to organize your
+          favourite
+          websites. Open a new browser tab and see your sites load
+          instantly. Try it for free.</p>
+        <div class="row ms-lg-1 justify-content-center justify-content-md-start">
+          <a href="#" class="col-lg-5 col-4 btn btn-primary p-1 p-lg-3 me-1">Get it on Chrome</a>
+          <a href="#" class="col-lg-5 col-4 btn btn-light gy-lg-0 p-1 p-lg-3 ms-1">Get it on Firefox</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FEATURES/ caracteristicas -->
+  <section id="features" class="px-sm-4 pb-sm-0 p-2 pt-5">
+    <div class="container-lg">
+      <div class="text-center">
+        <h1 class="fw-bold">Features</h1>
+        <p class="subtext-title lead text-muted">Our aim is to make it quick and easy for you to access
+          your favourite websites. Your bookmarks sync between your devices so you can
+          access them on the go.
+        </p>
+      </div>
+    </div>
+    <div id="tabs" class="container-fluid mt-5">
+      <nav>
+        <div class="nav nav-tabs justify-content-center nav-justified row" id="nav-tab" role="tablist">
+          <button class="nav-link active col-12 col-md-4" id="nav-bookmark-tab" data-bs-toggle="tab"
+            data-bs-target="#nav-bookmark" type="button" role="tab" aria-controls="nav-bookmark" aria-selected="true">
+            Simple Bookmarking</button>
+          <button class="nav-link col-12 col-md-4" id="nav-searching-tab" data-bs-toggle="tab"
+            data-bs-target="#nav-searching" type="button" role="tab" aria-controls="nav-searching"
+            aria-selected="false">Speedy Searching</button>
+          <button class="nav-link col-12 col-md-4" id="nav-sharing-tab" data-bs-toggle="tab"
+            data-bs-target="#nav-sharing" type="button" role="tab" aria-controls="nav-sharing"
+            aria-selected="false">Easy Sharing</button>
         </div>
       </nav>
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            2 of 3 (wider)
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-bookmark" role="tabpanel" aria-labelledby="nav-bookmark-tab"
+          tabindex="0">
+          <div class="row pt-md-5 pt-sm-0">
+            <div class="col-12 col-md-6 gy-sm-5 gy-5">
+              <div class="img-features">
+                <img class="img-features-bookmarking img-fluid shadow-lg"
+                  src="/Imagenes/illustration-features-tab-1.svg" alt="tab1">
+                <img src="/Imagenes/imagen.svg" alt="imagen" class="imagen img-fluid">
+              </div>
+            </div>
+            <div class="col-12 col-md-6 ps-md-5 text-center text-md-start gy-5 gy-sm-5 pt-sm-5">
+              <h1 class="fw-bold">Bookmark in one click</h1>
+              <p class="subtext-features lead text-muted mt-3">Organize your bookmarks however you like.
+                Our simple drag-and-drop interface gives
+                you complete control over how you manage your favourite sites.
+              </p>
+              <a href="#" class="btn-intro btn btn-primary p-3 mt-3">More Info</a>
+
+            </div>
           </div>
-          <a class="navbar-brand" href="#"><img src="./Imagenes/illustration-hero.svg" class="img-fluid" alt="./imagenes/illustration-hero.svg"></a>
-          <div class="col">
-            2 of 3 (wider)
+        </div>
+        <div class="tab-pane fade" id="nav-searching" role="tabpanel" aria-labelledby="nav-searching-tab" tabindex="0">
+          <div class="row pt-5">
+            <div class="col-12 col-md-6">
+              <div class="img-features">
+                <img class="img-features-bookmarking img-fluid" src="/Imagenes/illustration-features-tab-2.svg"
+                  alt="tab1">
+                <img src="/Imagenes/imagen.svg" alt="imagen" class="imagen img-fluid">
+              </div>
+            </div>
+            <div class="col-12 col-md-6 ps-md-5 text-center text-md-start gy-5 gy-sm-5 pt-sm-5">
+              <h1 class="fw-bold">Intelligent search</h1>
+              <p class="subtext-features lead text-muted text-wrap mt-3">Our powerful search feature will
+                help you find saved sites in no time at all. No need to trawl through all of your
+                bookmarks.
+              </p>
+              <a href="#" class="btn-intro btn btn-primary p-3 mt-3">More Info</a>
+
+            </div>
           </div>
+        </div>
+        <div class="tab-pane fade" id="nav-sharing" role="tabpanel" aria-labelledby="nav-sharing-tab" tabindex="0">
+          <div class="row pt-5">
+            <div class="col-12 col-md-6">
+              <div class="img-features">
+                <img class="img-features-bookmarking img-fluid" src="/Imagenes/illustration-features-tab-3.svg"
+                  alt="tab1">
+                <img src="/Imagenes/imagen.svg" alt="imagen" class="imagen img-fluid">
+              </div>
+            </div>
+            <div class="col-12 col-md-6 ps-md-5 text-center text-md-start gy-5 gy-sm-5 pt-sm-5">
+              <h1 class="fw-bold">Share your bookmarks</h1>
+              <p class="subtext-features lead text-muted text-wrap mt-3"> Easily share your bookmarks and
+                collections with others. Create a shareable link that you can send at the click of a
+                button.
+              </p>
+              <a href="#" class="btn-intro btn btn-primary p-3 mt-3">More Info</a>
+
+            </div>
           </div>
         </div>
       </div>
+
+    </div>
+  </section>
+
+  <!-- DOWNLOADS /descargas  -->
+  <section id="downloads" class="mt-5 pb-sm-0 px-sm-5 p-2 pt-5">
+    <div class="container-lg">
+      <div class="text-center">
+        <h1 class="fw-bold">Download the extension</h1>
+        <p class="lead text-muted">We've got more browsers in the pipeline. Please do let us know if you've
+          got a favourite you'd like us to prioritize.
+        </p>
+      </div>
+      <div class="row my-5 align-items-center justify-content-center">
+        <div class="dwl-cards col-12 col-lg-4 mb-4">
+          <div class="card p-4 border-0 shadow">
+            <div class="card-body text-center">
+              <img src="/Imagenes/logo-chrome.svg" alt="chrome" class="img-fluid py-5">
+              <h4 class="card-title fw-bold">Add to Chrome</h4>
+              <p class="lead card-subtitle text-muted pt-2 pb-3">Minimum version 62</p>
+              <img src="/Imagenes/bg-dots.svg" alt="dots" class="img-fluid">
+              <button type="button" class="col-12 btn btn-primary btn-block my-3 shadow">Add & Install
+                Extension</button>
+            </div>
+          </div>
+        </div>
+        <div class="dwl-cards col-12 col-lg-4 mb-4">
+          <div class="card p-4 border-0 shadow">
+            <div class="card-body text-center">
+              <img src="/Imagenes/logo-firefox.svg" alt="chrome" class="img-fluid py-5">
+              <h4 class="card-title fw-bold">Add to Chrome</h4>
+              <p class="lead card-subtitle text-muted pt-2 pb-3">Minimum version 55</p>
+              <img src="/Imagenes/bg-dots.svg" alt="dots" class="img-fluid">
+              <button type="button" class="col-12 btn btn-primary btn-block my-3 shadow">Add & Install
+                Extension</button>
+            </div>
+          </div>
+        </div>
+        <div class="dwl-cards col-12 col-lg-4 mb-4">
+          <div class="card p-4 border-0 shadow">
+            <div class="card-body text-center">
+              <img src="/Imagenes/logo-opera.svg" alt="chrome" class="img-fluid py-5">
+              <h4 class="card-title fw-bold">Add to Opera</h4>
+              <p class="lead card-subtitle text-muted pt-2 pb-3">Minimum version 46</p>
+              <img src="/Imagenes/bg-dots.svg" alt="dots" class="img-fluid">
+              <button type="button" class="col-12 btn btn-primary btn-block my-3 shadow">Add & Install
+                Extension</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
 </body>
+
 </html>
