@@ -6,5 +6,499 @@ $menu: #2f354f;
 $dark: #242A45;
 
 
+//fonts
+$rubik: 'Rubik', sans-serif;
+$noto: 'Noto Sans', sans-serif;
+
 //import bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+//mixins
+
+@mixin buton-outline ($color) {
+    background-color: rgb(255, 255, 255);
+    border-color: $color;
+    border: 2px solid;
+    color: $color;
+
+}
+
+
+body {
+    font-family: $rubik  !important;
+}
+
+.btn {
+    font-family: $noto  !important;
+}
+
+
+//navbar
+
+
+.navbar-brand {
+    fill: rgb(214, 111, 111);
+    z-index: 5;
+
+}
+
+.nav-link {
+    color: black;
+    font-size: 15px;
+
+
+    &:hover {
+        color: $secondary  !important;
+    }
+}
+
+.social-media {
+    filter: invert;
+}
+
+.btn-secondary {
+    font-family: $noto  !important;
+    font-weight: 600 !important;
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+
+    &:hover {
+        @include buton-outline($secondary);
+    }
+}
+
+.navbar-toggler {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+
+
+    &:focus,
+    &:active,
+    &-icon:focus {
+        box-shadow: none;
+        border: 0;
+        outline: none;
+
+    }
+
+    span {
+        margin: 0;
+        padding: 0;
+    }
+
+    .top-bar {
+        transform: rotate(135deg);
+        margin-top: 0px;
+    }
+
+    .middle-bar {
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+
+    .bottom-bar {
+        transform: rotate(-135deg);
+        margin-top: 0px;
+    }
+
+    &.collapsed {
+        .top-bar {
+            transform: rotate(0deg);
+            margin-top: -20px;
+        }
+
+        .middle-bar {
+            filter: alpha(opacity=100);
+            opacity: 1;
+        }
+
+        .bottom-bar {
+            margin-top: 20px;
+            transform: rotate(0deg);
+        }
+    }
+}
+
+.toggler-icon {
+    position: absolute;
+    display: block;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 3px;
+    background: rgb(234, 108, 108);
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.middle-bar {
+    margin-top: 0px;
+}
+
+
+//section intro
+
+
+section {
+    padding: 6rem;
+}
+
+h1 {
+    font-weight: 400 !important;
+}
+
+.intro-img {
+    position: relative;
+
+    &-tab {
+        position: absolute;
+        z-index: 2;
+    }
+}
+
+#imagen {
+    position: relative;
+    z-index: 1;
+    top: 1rem;
+    left: 6rem;
+    height: 24rem;
+    width: 100%;
+}
+
+.subtext-intro {
+    width: 90%;
+}
+
+.btn-primary {
+    &:hover {
+        @include buton-outline($primary);
+    }
+}
+
+.btn-light {
+    &:hover {
+        background-color: rgb(221, 97, 97);
+        border: 2px solid;
+
+    }
+}
+
+
+//Features section
+
+.img-features {
+    position: relative;
+
+    &-bookmarking {
+        position: absolute;
+        z-index: 2;
+    }
+}
+
+.imagen {
+    position: relative;
+    z-index: 1;
+    top: 2rem;
+    right: 8rem;
+    height: 24rem;
+    width: 100%;
+    transform: scaleX(-1); //voltear la imagen 
+    -webkit-transform: scaleX(-1);
+}
+
+.nav-tabs {
+    border-bottom: 2px solid $light  !important;
+}
+
+.nav-link {
+    border-top: transparent !important;
+    border-left: transparent !important;
+    border-right: transparent !important;
+
+    &.active {
+        border-bottom: 3px solid $secondary  !important;
+        color: $secondary  !important;
+    }
+
+    &:hover,
+    &:focus {
+        color: $secondary;
+    }
+}
+
+.subtext-features {
+    width: 90%
+}
+
+
+
+//faqs section
+
+
+.accordion-button::after {
+    background-image: url("/Imagenes/icon-arrow.svg");
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: $secondary;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("/Imagenes/icon-arrow.svg");
+}
+
+.accordion-button:hover {
+    color: $secondary;
+}
+
+.accordion-button:focus {
+    border-color: transparent;
+}
+
+//footer
+
+.list-inline-item {
+    font-size: 15px;
+
+    &:hover {
+        color: $secondary;
+    }
+}
+
+.icon-footer:hover {
+    fill: $secondary;
+}
+
+
+//MEDIA QUERY
+
+
+// X-Small devices (portrait phones, less than 576px)
+
+
+@media (max-width:576px) {
+
+    //navbar
+
+    .navbar-collapse {
+        &.show {
+            background-color: rgba($menu, .9);
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 3;
+
+            .navbar-nav {
+                width: 100%;
+                position: fixed;
+                margin-top: 3.5rem;
+            }
+
+            .nav-item {
+                width: 90%;
+                color: white;
+                font-size: 22px;
+                padding: 0.5rem;
+                border-top: 0.5px solid;
+            }
+
+            .nav-link {
+                color: white;
+
+                &:hover {
+                    color: rgb(207, 206, 206) !important;
+                }
+            }
+
+            .social-media {
+                border: 0;
+            }
+
+            .btn-intro {
+                margin-top: 10px;
+                background-color: $menu;
+                border-color: white;
+                color: white;
+                border: 2px solid;
+                width: 100%;
+
+                &:hover {
+                    background-color: white;
+                    color: $menu;
+
+                }
+            }
+
+        }
+    }
+
+}
+
+// Small devices (landscape phones, 576px and up)
+
+@media (min-width: 576px) and (max-width:768px) {
+
+    //navbar
+    .navbar-collapse {
+        &.show {
+            background-color: rgba($menu, .9);
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 3;
+
+            .navbar-nav {
+                width: 100%;
+                position: fixed;
+                margin-top: 3.5rem;
+            }
+
+            .nav-item {
+                width: 90%;
+                color: rgb(220, 122, 122);
+                font-size: 22px;
+                padding: 0.5rem;
+                border-top: 0.5px solid;
+            }
+
+            .nav-link {
+                color: white;
+
+                &:hover {
+                    color: rgb(246, 159, 159) !important;
+                }
+            }
+
+            .social-media {
+                border: 0;
+                margin-top: 3rem;
+            }
+
+            .btn-intro {
+                margin-top: 10px;
+                background-color: $menu;
+                border-color: white;
+                color: white;
+                border: 2px solid;
+                width: 100%;
+
+                &:hover {
+                    background-color: white;
+                    color: $menu;
+
+                }
+            }
+
+        }
+    }
+
+    //intro
+    #imagen {
+        top: 6rem;
+        left: 7rem;
+    }
+
+    //features
+    .imagen {
+        top: 4rem;
+        right: 11rem;
+    }
+
+    //footer
+    .list-inline-item {
+        font-size: 13px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+
+
+@media (min-width: 768px) {
+
+    //intro
+    #imagen {
+        top: 2rem;
+        left: 4rem;
+    }
+
+    .intro-img-tab {
+        top: 4rem;
+        right: 1rem;
+    }
+
+    //features
+    .imagen {
+        top: 2rem;
+        right: 7rem;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+
+@media (min-width: 992px) {
+
+    //intro
+    #imagen {
+        top: 6rem;
+        left: 7rem;
+    }
+
+    //features
+    .imagen {
+        top: 5rem;
+        right: 7rem;
+    }
+
+    .dwl-cards:nth-child(2) {
+        margin-top: 5rem;
+    }
+
+    .dwl-cards:nth-child(3) {
+        margin-top: 10rem;
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+
+@media (min-width: 1200px) {
+
+    //intro
+    #intro {
+        height: 35rem;
+    }
+
+    #imagen {
+        top: 6rem;
+        left: 7rem;
+    }
+
+    //features
+    .imagen {
+        top: 2rem;
+        right: 8rem;
+    }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+
+@media (min-width: 1400px) {
+
+    //intro
+    #imagen {
+        top: 8rem;
+        left: 13rem;
+    }
+
+    //features
+    .imagen {
+        top: 2rem;
+        right: 16rem;
+    }
+}

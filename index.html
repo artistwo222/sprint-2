@@ -10,14 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400&family=Rubik&display=swap"
     rel="stylesheet">
   <link href="/css/main.min.css" rel="stylesheet">
-  <!--  <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="sass/main.scss"> -->
   <title>S2. Bootstrap y SASS</title>
 </head>
 
 <body>
 
   <!--NAVBAR /barra de navegación -->
+
   <div class="container-fluid">
     <nav id="navbar" class="navbar navbar-expand-md navbar-light">
       <div class="container-xxl">
@@ -25,8 +24,13 @@
           <img src="/Imagenes/logo-bookmark.svg" alt="" class="logo-bookmark d-inline-block align-text-top">
         </a>
 
-
         <!-- TOGGLE /Para movil-->
+
+        <!--  (toggle) para un menú de navegación en un
+        sitio web. El botón se utiliza específicamente en dispositivos móviles (clase d-md-none) para mostrar o ocultar
+        el menú
+        de navegación al hacer clic en él. -->
+
         <button id="toggler-nav" class="navbar-toggler d-flex d-md-none flex-column justify-content-around collapsed"
           type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav"
           aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +38,8 @@
           <span class="toggler-icon middle-bar"></span>
           <span class="toggler-icon bottom-bar"></span>
         </button>
+
+
 
         <div id="main-nav" class="collapse navbar-collapse justify-content-end">
           <ul class="navbar-nav text-center">
@@ -54,7 +60,6 @@
       </div>
     </nav>
   </div>
-
 
   <!-- MAIN CONTENT /contenido principal-->
 
@@ -82,8 +87,8 @@
     </div>
   </section>
 
-
   <!-- FEATURES/ caracteristicas -->
+
   <section id="features" class="px-sm-4 pb-sm-0 p-2 pt-5">
     <div class="container-lg">
       <div class="text-center">
@@ -176,6 +181,7 @@
   </section>
 
   <!-- DOWNLOADS /descargas  -->
+
   <section id="downloads" class="mt-5 pb-sm-0 px-sm-5 p-2 pt-5">
     <div class="container-lg">
       <div class="text-center">
@@ -226,6 +232,185 @@
     </div>
 
   </section>
+
+  <!-- FAQS section / Sección de preguntas frecuentes -->
+
+  <section id="faqs" class="pt-sm-5 px-sm-5 p-2 pt-5 pb-5">
+    <div class="container-lg">
+      <div class="text-center">
+        <h1 class="fw-bold">Frequently Asked Questions</h1>
+        <p class="lead text-muted">Here are some of our FAQs. If you have any other questions you'd like
+          answered
+          please feel free to email us.
+        </p>
+      </div>
+      <div class="accordion accordion-flush mt-5" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              What is Bookmark?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, quo recusandae?
+              Officia quos rerum aperiam placeat repellat dolores quaerat. Quo corrupti nisi, consequuntur
+              nobis minima at? Quibusdam reprehenderit id quaerat? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Tempore, debitis! Quod inventore molestias explicabo veritatis. Quos et
+              laboriosam harum fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+              asperiores saepe consectetur aspernatur velit harum praesentium, provident temporibus
+              tempore aperiam.
+
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              How can I request a new browser?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, amet ex. Veniam architecto
+              commodi ullam nihil minus cumque maiores, doloremque expedita reiciendis consequuntur
+              repellat eaque? Autem at eum beatae qui?Lorem ipsum dolor sit, amet consectetur adipisicing
+              elit. Recusandae repudiandae ea deserunt laudantium. Eos exercitationem fuga voluptatem
+              vitae temporibus ipsam alias quaerat, nam, impedit nulla reiciendis. Praesentium, doloribus
+              natus. Modi, quia delectus provident nesciunt amet aliquid ea esse unde accusamus officia
+              aliquam asperiores atque iste mollitia suscipit.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Is there a mobile app?
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, id error? Tempora
+              voluptatibus, consequuntur non architecto enim consequatur qui error cupiditate eveniet eos
+              illo sapiente facilis sed harum ex accusantium. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Incidunt blanditiis esse, culpa quidem voluptas voluptatibus dolores eos
+              qui ipsam magni maiores vitae quae, laboriosam distinctio aut temporibus aperiam debitis vel
+              obcaecati? Ipsam deserunt perspiciatis molestias omnis est nihil? Quos, earum!
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              What about other Chromium browsers?
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, id error? Tempora
+              voluptatibus, consequuntur non architecto enim consequatur qui error cupiditate eveniet eos
+              illo sapiente facilis sed harum ex accusantium. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Incidunt blanditiis esse, culpa quidem voluptas voluptatibus dolores eos
+              qui ipsam magni maiores vitae quae, laboriosam distinctio aut temporibus aperiam debitis vel
+              obcaecati? Ipsam deserunt perspiciatis molestias omnis est nihil? Quos, earum!
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn-intro btn btn-primary p-3 mt-3">More Info</button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER section/ -->
+
+  <footer class="text-white justify-content-center">
+    <div class="container-fluid bg-primary">
+      <div class="container"></div>
+      <div class="row  p-5 ">
+        <div class="row text-center p-2">
+          <h6 class="">
+            35.000+ ALREADY JOINED
+          </h6>
+          <h2 class="fw-bold">Stay up-to-date with what whe're doing</h2>
+        </div>
+        <form action="#" id="contactForm" class="row justify-content-center">
+          <div class="mb-3 col-12 col-sm-12 col-md-3 ms-md-5">
+            <input class="form-control" id="emailAddress" type="email" placeholder="Enter your email adress"
+              data-sb-validations="required, email" />
+            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is
+              required.</div>
+            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Whoops, make sure it's an
+              email</div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-3 d-grid d-md-block">
+            <button class="btn btn-secondary p-sm-2" id="submitButton" type="submit">Contact Us</button>
+          </div>
+
+
+
+        </form>
+      </div>
+
+      <nav class="row bg-dark p-3 justify-content-center align-items-center">
+        <div class="row container px-lg-5 mx-lg-5 align-items-center justify-content-center">
+          <a href="#" class="col-sm-3 col-12 text-center">
+            <img class="img-fluid" src="/Imagenes/logo-bookmark.svg" alt="Logo bookmark">
+          </a>
+          <ul class="row col-sm-6 col-12 list-unstyled d-flex my-4 my-sm-0 list-inline text-center">
+            <li class="mx-0 list-inline-item col-sm-4 col-md-3">
+              <a href="#features" class="text-reset text-decoration-none">FEATURES</a>
+            </li>
+            <li class="mx-0 my-3 my-sm-0 list-inline-item col-12 col-sm-3 col-md-3">
+              <a href="#pricing" class="text-reset text-decoration-none">PRICING</a>
+            </li>
+            <li class="mx-0 list-inline-item col-12 col-sm-3 col-md-3">
+              <a href="#contact" class="text-reset text-decoration-none">CONTACT</a>
+            </li>
+          </ul>
+
+          <ul class="col-sm-3 col-12 list-unstyled d-flex mb-0 justify-content-sm-end justify-content-center">
+            <li class="mx-3">
+              <a href="#">
+                <img class="img-fluid icon-footer" src="/Imagenes/icon-facebook.svg" alt="facebook">
+              </a>
+            </li>
+            <li class="mx-3">
+              <a href="#">
+                <img class="img-fluid icon-footer" src="/Imagenes/icon-twitter.svg" alt="twitter">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+    </div>
+
+  </footer>
+
+
+  <!-- JavaScript Bundle with Popper 
+     generalmente es un archivo compilado y minificado que contiene los archivos
+  JavaScript necesarios para utilizar el framework Popper. -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/js/main.js"></script>
 
 
 </body>
