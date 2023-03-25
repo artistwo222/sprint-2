@@ -1,8 +1,9 @@
-'use strict'
 
-let features = document.getElementById("features-nav");
-let nav = document.getElementById("main-nav");
+"use strict";
 
-features.addEventListener("click", function () {
-    nav.classList.remove("show");
+const featuresNav = document.getElementById("features-nav");
+const mainNav = document.getElementById("main-nav");
+
+featuresNav.addEventListener("click", function () {
+    mainNav.classList.remove("show");
 });
